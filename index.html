@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crazy Sam's Paper Mail</title>
+	<link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+        font-family: 'Rick and Morty';
+        src: url('path/to/rick-and-morty-font.ttf') format('truetype');
+        }
+        body {
+        background-color: #FDDDE6;
+        background-image: radial-gradient(circle at 50% 50%, #FFC3D5 0%, #FDDDE6 100%);
+        color: #000000;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+        header {
+            background-color: babyblue;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+    
+        h1 {
+            font-size: 36px;
+            font-family: "Segoe Script", cursive;
+            margin: 0;
+            color: black;
+        }
+    
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+    
+        nav li {
+            margin-right: 20px;
+        }
+    
+        nav a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: transform 0.2s ease-in-out;
+        font-size: 20px;
+        display: inline-block;
+        margin-right: 10px;
+        }
+
+        nav a:hover {
+        transform: translateY(-10px);
+        }
+
+    
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+    
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+            flex-basis: 400px;
+            flex-grow: 1;
+        }
+    
+        h2 {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 0;
+            color: black;
+        }
+    
+        ul {
+            list-style: disc;
+            margin: 0;
+            padding: 0 0 0 20px;
+            color: black;
+        }
+    
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+            color: black;
+        }
+    
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    
+        form input[type="submit"] {
+            background-color: lightblue;
+            color: navy;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+    
+        form input[type="submit"]:hover {
+            background-color: white;
+        }
+    
+        footer {
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        footer p {
+            margin: 0;
+            color: white;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+        }
+        #board-members {
+  background-color: #f5f5f5;
+  padding: 40px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+#board-members h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#board-members ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#board-members li {
+  margin: 0 20px;
+  text-align: center;
+}
+
+#board-members h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#board-members p {
+  font-size: 18px;
+  margin: 0;
+}
+#badges {
+  background-color: #f5f5f5;
+  padding: 40px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+#badges h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: inline-block;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.badge img {
+  width: 100%;
+  height: auto;
+}
+.services-container {
+  background-color: #f4e4ff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+  margin: 40px;
+}
+
+.services-container h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Arial Black", sans-serif;
+  color: #562d8c;
+  text-shadow: 2px 2px #e5d5ff;
+}
+
+.services-container ul {
+  list-style: disc;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.services-container li {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 10px;
+}
+
+.services-container p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #562d8c;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 30px;
+  text-align: center;
+  text-shadow: 1px 1px #e5d5ff;
+}
+
+
+    </style>
+    
+</head>
+<body>
+	<header>
+		<h1 style="background-color: yellow;font-size:60px;outline-color:white;accent-color: yellow;">Crazy Sam's Paper Mail</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#about">About</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#contact">Contact Us</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section id="about">
+			<h2>About Crazy Sam's Paper Mail</h2>
+			<p style="font-size: large;color:maroon;">YHey there, my fellow party people! It's me, Crazy Sam, and I've got some news for ya. You want the news delivered straight to your door every day, from Monday through Tuesday? Well, I've got ya covered, my friend! And let me tell ya, it ain't your ordinary news, no way! It's the craziest, wackiest, most ridiculous news out there! It's like the whole world is one big party, and we're the only ones bringing the good stuff. So, if you wanna keep up with what's going down, sign up for Crazy Sam's Paper Mail, 'cause we're the only ones wild enough to give it to ya like it is!.</p>
+		</section>
+		<section id="services">
+            <div class="services-container">
+              <h2>Our Services</h2>
+              <ul>
+                <li>Daily delivery of the craziest news</li>
+                <li>Flexible delivery schedule that fits your needs</li>
+                <li>Option for digital subscription, because we know you can't wait to read the news</li>
+              </ul>
+              <p>Hey there, my fellow party people! It's me, Crazy Sam, and I've got some news for ya. You want the news delivered straight to your door every day, from Monday through Tuesday? Well, I've got ya covered, my friend! And let me tell ya, it ain't your ordinary news, no way! It's the craziest, wackiest, most ridiculous news out there! It's like the whole world is one big party, and we're the only ones bringing the good stuff. So, if you wanna keep up with what's going down, sign up for Crazy Sam's Paper Mail, 'cause we're the only ones wild enough to give it to ya like it is!</p>
+            </div>
+          </section>
+          
+        <section id="board-members">
+            <h2>Board Members</h2>
+            <ul>
+              <li>
+                <h3>John Doe</h3>
+                <p>President</p>
+              </li>
+              <li>
+                <h3>Jane Smith</h3>
+                <p>Vice President</p>
+              </li>
+              <li>
+                <h3>Bob Johnson</h3>
+                <p>Treasurer</p>
+              </li>
+              <li>
+                <h3>Sara Lee</h3>
+                <p>Secretary</p>
+              </li>
+            </ul>
+          </section>
+          <section id="badges">
+            <h2>Badges</h2>
+            <div class="badge">
+              <img src="path/to/image1.jpg" alt="Badge 1">
+            </div>
+            <div class="badge">
+              <img src="path/to/image2.jpg" alt="Badge 2">
+            </div>
+            <div class="badge">
+              <img src="path/to/image3.jpg" alt="Badge 3">
+            </div>
+          </section>
+          
+		<section id="contact">
+			<h2>Contact Us</h2>
+			<form action="submit-form.php" method="post">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+				<input type="submit" value="Send Message">
+			</form>
+        </main>
+        <footer>
+            <p>&copy; 2023 Crazy Sam's Paper Mail. All rights reserved.</p>
+        </footer>
+        </body>
+        </html>```
+
+
